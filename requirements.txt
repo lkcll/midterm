@@ -1,0 +1,15 @@
+geopandas
+pandas
+leafmap
+owslib
+streamlit
+pydeck
+folium
+streamlit_folium
+plotly==5.15.0
+numpy
+plotly
+xarray
+rioxarray 
+netcdf4
+localtileserver
