@@ -1,6 +1,15 @@
 import leafmap.foliumap as leafmap
 import streamlit as st
+import os
+import subprocess
 
+# Check and install netCDF4
+try:
+    import netCDF4 as nc
+except ModuleNotFoundError:
+    st.warning("netCDF4 is not installed. Attempting to install it...")
+    subprocess.check_call([os.sys.executable, "-m", "pip", "install", "netCDF4"])
+    import netCDF4 as nc  # Re-import after installation
 st.header('Test')
 
 filename = 'test-leafmap/wind_global.nc'
